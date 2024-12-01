@@ -1,7 +1,7 @@
 day_data: list = open("input", "r").read().split()
 
-ll = []
-rl = []
+ll, rl = [], []
+
 
 index = 0
 for i in day_data:
@@ -19,8 +19,6 @@ result = []
 for i in range(0, len(ll)):
     x = int(ll[i])
     y = int(rl[i])
-    if x > y:
-        result.append(x - y)
-    else:
-        result.append(y - x)
+    result.append(abs(x - y))
+
 print(sum(result))
