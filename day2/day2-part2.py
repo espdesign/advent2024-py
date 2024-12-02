@@ -41,10 +41,11 @@ def problem_damper(levels):
 
 class Report:
     def __init__(self, report):
+        # Safe by default
         self.safe = True
+
         self.report = [int(i) for i in report.split()]
         self.fails = []
-        # Safe by default
         self.ordered = is_ordered(self.report)
         if not is_diff_safe(self.report):
             self.fails.append("fail-r2")
