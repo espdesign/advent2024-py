@@ -1,4 +1,4 @@
-day_data: list = open("input", "r").read()
+day_data: list = open("input.input", "r").read()
 
 
 # REPORT SAFE RULES
